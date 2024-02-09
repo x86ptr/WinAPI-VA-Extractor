@@ -3,7 +3,6 @@ import sys
 def LittleEndianConvertor(string, padding):
     l = list()
     s = ""
-    print(f'{string}:{sys.argv[1]}')
     for i in range(len(string)):
         if i != 0 and i % padding == 0:
             l.append(s)
@@ -20,7 +19,7 @@ def LittleEndianConvertor(string, padding):
         print()
         
 if len(sys.argv) != 3:
-    print("Usage: python little-endian.py <ARCH:x32|x64> <YOUR-STRING>")
+    print("Usage: python EndianConverter.py <arch> <string>")
     exit(-1)
 
 padding = 8
