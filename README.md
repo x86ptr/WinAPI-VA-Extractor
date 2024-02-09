@@ -5,7 +5,7 @@ The **PEB_LDR_DATA** structure, located within the **Process Environment Block (
 
 #### _PEB
 ```C++
-typedef struct _PEB {
+struct _PEB {
     // ...
     PPEB_LDR_DATA Ldr;
     // ...
@@ -26,7 +26,7 @@ struct _PEB_LDR_DATA
 
 #### _LDR_DATA_TABLE_ENTRY
 ```C++
-typedef struct _LDR_DATA_TABLE_ENTRY {
+struct _LDR_DATA_TABLE_ENTRY {
     PVOID Reserved1[2];
     LIST_ENTRY InMemoryOrderLinks;
     PVOID Reserved2[2];
